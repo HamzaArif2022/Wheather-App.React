@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+import "./App.css";
+import { SearchBar } from "./Component/Searchbar/SearchBar";
+import { Wallpaper } from "./Component/Wallpaper/Wallpaper";
+import { Weather } from "./Component/Wheather/wheather";
+import store from "./Store/Store";
+import { motion } from "framer-motion";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Wallpaper />
+      <motion.div
+        className="container"
+        initial={{
+          x: "100vw",
+        }}
+        animate={{ x: 0 }}
+        transition={{
+          delay: 1,
+          duration: 1,
+        }}
+      >
+        <Provider store={store}>
+          <SearchBar />
+          <Weather />
+        </Provider>
+      </motion.div>
+    </>
   );
 }
 
