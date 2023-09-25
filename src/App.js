@@ -15,7 +15,8 @@ function App() {
         initial={{
           x: "100vw",
         }}
-        animate={{ x: 0 }}
+        animate={{ x: 0 
+        }}
         transition={{
           delay: 1,
           duration: 1,
