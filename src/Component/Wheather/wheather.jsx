@@ -15,8 +15,7 @@ import { Hidden } from '@mui/material';
 
 export const Weather = () => {
     const wheatherData = useSelector((data) => data.wheather)
-
-    
+    console.log(wheatherData);
     return (
         <>
             {wheatherData.isSelected ? (
