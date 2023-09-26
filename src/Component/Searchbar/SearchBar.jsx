@@ -97,7 +97,7 @@ export const SearchBar = () => {
             <Form>
                 <Form.Group className={styles.searchContainer}>
                     <Autocomplete className={styles.searchInput}
-                        clearOnBlur={cities.length > 0 ? false : true}
+                        clearOnBlur={ false }
                         onReset={handlerReset}
                         onChange={handleAutocompleteSelect}// change the selected value
                         getOptionLabel={(option) => option.formatted}

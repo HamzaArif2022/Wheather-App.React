@@ -10,12 +10,12 @@ import Moment from 'react-moment';
 import Huimidity from '../Svgs/Huimidity';
 import SpeedorMeter from '../Svgs/SpeedorMeter';
 import { easeInOut, motion } from 'framer-motion';
-import { Hidden } from '@mui/material';
+
 
 
 export const Weather = () => {
     const wheatherData = useSelector((data) => data.wheather)
-    console.log(wheatherData);
+   
     return (
         <>
             {wheatherData.isSelected ? (
@@ -89,26 +89,26 @@ export const Weather = () => {
                                 </div>
 
 
-                                <motion.div 
-                                
-                                 initial={
-                                    {
-                                       
-                                        opacity: 0
+                                <motion.div
+
+                                    initial={
+                                        {
+
+                                            opacity: 0
+                                        }
                                     }
-                                }
-                                animate={{
-                                    
-                                    
-                                    opacity: 2
-                                }}
-                                transition={{
-                                    duration: 0.2,
-                                    delay: .6,
-                                    ease: easeInOut
-                                }}
-                                
-                               >
+                                    animate={{
+
+
+                                        opacity: 2
+                                    }}
+                                    transition={{
+                                        duration: 0.2,
+                                        delay: .6,
+                                        ease: easeInOut
+                                    }}
+
+                                >
                                     <div><SpeedorMeter color={'#fff'} width={'25px'} height={'25px'} /></div>
                                     <div>SpeedorMeter</div>
                                     <div>{wheatherData.wind.speed}° C</div>
