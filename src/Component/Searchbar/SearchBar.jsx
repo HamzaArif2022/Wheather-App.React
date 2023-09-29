@@ -42,7 +42,7 @@ export const SearchBar = () => {
                 dispatch(setwheather({ clouds, main, name, sys, weather, wind, isSelected: true }))
             })
         }
-    }, [GeoLocation])
+    })
 
     // lorsque on fait un rechecher sur une valeur 
     const handleAutocompleteSelect = (e, value) => {
