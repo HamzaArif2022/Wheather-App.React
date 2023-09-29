@@ -1,4 +1,4 @@
-@import "src/assets/scss/variables";
+
 
 div.container {
   display: flex;
@@ -21,7 +21,7 @@ div.container {
   align-items: center;
   font-size: 0.8rem;
   opacity: 0.6;
-  gap: $weather-infos-gap;
+  gap: 0.5rem;
 }
 
 .temperature {
@@ -39,7 +39,7 @@ div.container {
   border-radius: 25px;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.3);
-  gap: calc($weather-infos-gap + 10%);
+  gap: calc(0.5rem + 10%);
 
   .border_right {
     border-right: 3px solid rgba(255, 255, 255, 0.2);
